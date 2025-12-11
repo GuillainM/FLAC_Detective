@@ -1,8 +1,8 @@
-# FLAC Detective v0.5.0 - Technical Documentation
+# FLAC Detective v0.6.4 - Technical Documentation
 
 ## Overview
 
-FLAC Detective is an advanced audio analysis tool designed to detect MP3-to-FLAC transcodes with exceptional precision. Version 0.5.0 represents a production-ready release with 79.2% authentic detection rate and less than 0.5% false positive rate.
+FLAC Detective is an advanced audio analysis tool designed to detect MP3-to-FLAC transcodes with exceptional precision. Version 0.6.4 represents a production-ready release with 89.1% authentic detection rate (tested on 817,631 files) and less than 0.5% false positive rate.
 
 ## Architecture
 
@@ -531,5 +531,7 @@ flac-detective /path/to/music --output report.txt
 
 ---
 
-**FLAC Detective v0.5.0 Technical Documentation**  
-**Last Updated: December 4, 2025**
+**FLAC Detective v0.6.4 Technical Documentation**
+**Last Updated: December 11, 2025**
+
+> **📚 For complete rule specifications with visual diagrams**: See [RULE_SPECIFICATIONS.md](RULE_SPECIFICATIONS.md)

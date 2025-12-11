@@ -1,11 +1,17 @@
-# SPÉCIFICATIONS TECHNIQUES DES RÈGLES DE DÉTECTION (v0.3)
+# SPÉCIFICATIONS TECHNIQUES DES RÈGLES DE DÉTECTION
 
-## Vue d'ensemble
+> **⚠️ NOTE**: Ce document est obsolète (v0.3). Pour la documentation complète et à jour de la version 0.6.4, veuillez consulter [RULE_SPECIFICATIONS.md](RULE_SPECIFICATIONS.md).
+
+---
+
+## Vue d'ensemble (v0.3 - OBSOLÈTE)
 Système de scoring additif sur 100 points.
 - **Score >= 80** : FAKE_CERTAIN
 - **Score >= 50** : FAKE_PROBABLE
 - **Score >= 30** : DOUTEUX
 - **Score < 30** : AUTHENTIQUE
+
+**Version actuelle (v0.6.4)**: Système de scoring sur 150 points avec 11 règles. Voir [RULE_SPECIFICATIONS.md](RULE_SPECIFICATIONS.md).
 
 ## Règle 1 : Signature Spectrale MP3 (CBR)
 **Objectif** : Détecter les MP3 CBR convertis en FLAC.
