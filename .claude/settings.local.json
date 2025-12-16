@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python test_banda_lobourou.py:*)",
+      "Bash(python test_banda_simple.py:*)",
+      "Bash(python test_debug.py:*)",
+      "Bash(python test_spectrum.py:*)",
+      "Bash(python test_load.py:*)",
+      "Bash(python test_partial.py:*)",
+      "Bash(python -c:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat(v0.7.0): Partial file reading and improved cutoff detection\n\nMajor improvements for handling problematic FLAC files and MP3 upscale detection:\n\n## Partial File Reading (Graceful Degradation)\n- Add `sf_blocks_partial()` function to read partial audio data when full decode fails\n- Modify `AudioCache` to automatically fallback to partial loading\n- Update analyzer and quality checks to work with partial data\n- Files with decoder errors now analyzed instead of marked as corrupted\n\n**Impact**: Problematic but valid FLAC files can now be analyzed for authenticity\ninstead of being incorrectly classified as CORRUPTED.\n\n## Improved Cutoff Detection\n- Add energy-based fallback detection using cumulative energy analysis\n- Detects MP3 upscales with high-frequency noise that fool magnitude-based detection\n- Spectrum analysis now works directly with cached audio for partial files\n- Proper conversion from dB to linear magnitude for energy calculations\n\n**Impact**: MP3-to-FLAC upscales with noise in high frequencies are now correctly\ndetected (e.g., files showing ~16kHz cutoff instead of falsely reporting 22kHz).\n\n## Files Modified\n- audio_loader.py: Add `sf_blocks_partial()` with retry logic and exponential backoff\n- audio_cache.py: Add partial loading fallback and `is_partial()` tracking\n- spectrum.py: Use cached audio data, add energy-based cutoff fallback\n- analyzer.py: Simplified to use AudioCache partial handling\n- quality.py: Skip corruption check when cache provided, handle partial analysis\n- pyproject.toml + __init__.py: Version bump to 0.7.0\n\n## Technical Details\n- Partial reads collect all successful chunks before decoder error\n- Energy-based detection: finds where 90% of cumulative energy is reached\n- Only triggers when slice-based method fails and cutoff < 85% of Nyquist\n- Maintains backward compatibility with existing authentic file detection\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\ndocs: Update README.md for v0.7.0\n\n- Update version numbers from 0.6.9 to 0.7.0\n- Add new \"v0.7.0 New Features\" section highlighting:\n  - Partial file reading for problematic FLAC files\n  - Energy-based cutoff detection improvements\n- Update project stats to reflect new version\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit -m \"$(cat <<''EOF''\ndocs: Add v0.7.0 entry to CHANGELOG.md\n\nComprehensive changelog entry for v0.7.0 including:\n\n### Major Features\n- Partial file reading (graceful degradation for problematic FLAC files)\n- Energy-based cutoff detection (improved MP3 upscale detection)\n\n### Changes\n- audio_loader.py: sf_blocks_partial() function\n- audio_cache.py: Partial loading fallback\n- spectrum.py: Energy-based detection & cached audio usage\n- analyzer.py: Simplified partial handling\n- quality.py: Skip corruption check with cache\n\n### Fixes\n- Critical: Files with decoder errors no longer marked as CORRUPTED\n- Example case: \"Banda lobourou.flac\" now correctly detected\n- Cutoff detection: ~10-16kHz instead of false 22kHz\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(python scripts/update_version.py:*)",
+      "Bash($env:PYTHONIOENCODING='utf-8')",
+      "Bash(git commit:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
