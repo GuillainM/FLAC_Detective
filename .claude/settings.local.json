@@ -10,7 +10,21 @@
       "Bash(gh run list:*)",
       "Bash(curl:*)",
       "Bash(python -m pip install:*)",
-      "Bash(python -m build:*)"
+      "Bash(python -m build:*)",
+      "Bash(python -m py_compile:*)",
+      "Bash(python test_diagnostic.py:*)",
+      "Bash(python -m flac_detective:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(flac-detective:*)",
+      "Bash(ls:*)",
+      "Bash(dir:*)",
+      "Bash(tee:*)",
+      "Bash(timeout 60 tail:*)",
+      "Bash(cat:*)",
+      "Bash(findstr:*)",
+      "Bash(test:*)",
+      "Bash(git reset:*)"
     ]
   }
 }
