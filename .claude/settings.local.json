@@ -44,7 +44,12 @@
       "Bash(if exist \"flac_detective-0.7.1\" rmdir /s /q flac_detective-0.7.1)",
       "Bash(if exist \"flac_detective-0.8.0\" rmdir /s /q flac_detective-0.8.0)",
       "Bash(if exist \"_templates\" rmdir /s /q _templates)",
-      "Bash(if exist \"api\" rmdir /s /q api)"
+      "Bash(if exist \"api\" rmdir /s /q api)",
+      "Bash(gh release create:*)",
+      "Bash(del:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(git mv:*)"
     ]
   }
 }
