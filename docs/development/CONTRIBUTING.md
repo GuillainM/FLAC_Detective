@@ -21,31 +21,49 @@ Thank you for your interest in contributing! This guide will help you get starte
 
 ```bash
 # Install development dependencies
-pip install -r requirements-dev.txt
+pip install -e ".[dev]"
+
+# Set up pre-commit hooks (IMPORTANT!)
+python scripts/setup_precommit.py
+# Or manually: pre-commit install
 
 # Run tests to ensure everything works
 pytest tests/
 ```
 
+**✨ Pre-commit hooks will now run automatically on every commit!** See [PRE_COMMIT_SETUP.md](../PRE_COMMIT_SETUP.md) for details.
+
 ### Making Changes
 
 1. **Write the code** - Follow PEP 8 style guide
 2. **Write tests** - Add tests in `tests/` for new features
+   - **Coverage requirement**: Maintain ≥80% code coverage
+   - Run `make test-cov` to check coverage locally
 3. **Test locally** - `pytest tests/` + `make lint`
 4. **Update docs** - Add/update relevant documentation
 
 ### Code Style
 
+**Pre-commit hooks handle this automatically**, but you can also run manually:
+
 ```bash
-# Format code
+# Run all pre-commit hooks
+pre-commit run --all-files
+
+# Or use Makefile shortcuts
+make format       # Format code with black + isort
+make lint         # Check style with flake8
+make type-check   # Type checking with mypy
+make check        # Run all quality checks (lint + type + test)
+
+# Or run tools individually
 black src/ tests/
-
-# Check style
+isort src/ tests/
 flake8 src/ tests/
-
-# Type checking
 mypy src/
 ```
+
+**Note**: Code formatting is enforced automatically on commit, so you don't need to run these manually unless debugging.
 
 ## Submitting Changes
 
@@ -67,11 +85,22 @@ mypy src/
 
 ## Pull Request Process
 
-1. Tests must pass (CI/CD checks)
-2. Code review by maintainers
-3. Documentation updated if needed
-4. Squash commits if requested
-5. Merge when approved
+1. **Pre-commit hooks pass** - All code quality checks must succeed
+2. **Tests must pass** - All unit and integration tests pass
+3. **Code review by maintainers** - At least one approval required
+4. **Documentation updated** - If adding features or changing behavior
+5. **Squash commits if requested** - Keep git history clean
+6. **Merge when approved** - Maintainer will merge
+
+### Pre-commit Hook Failures?
+
+If pre-commit hooks fail:
+- **Formatting issues** (Black, isort): Usually auto-fixed, just `git add` and commit again
+- **Linting issues** (flake8): Fix manually and commit
+- **Type errors** (mypy): Add type hints and commit
+- **Security issues** (bandit): Review and fix, or add `# nosec` comment if false positive
+
+See [PRE_COMMIT_SETUP.md](../PRE_COMMIT_SETUP.md) for troubleshooting.
 
 ## Report Bugs
 

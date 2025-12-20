@@ -24,7 +24,27 @@
       "Bash(cat:*)",
       "Bash(findstr:*)",
       "Bash(test:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(flac --verify --decode-through-errors:*)",
+      "Bash(flac:*)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(tree:*)",
+      "Bash(del testsunittest_repair_standalone.py)",
+      "Bash(pre-commit validate-config:*)",
+      "Bash(if not exist \"_static\" mkdir _static)",
+      "Bash(if not exist \"_templates\" mkdir _templates)",
+      "Bash(pre-commit run:*)",
+      "Bash(copy docsdevelopmentCONTRIBUTING.md CONTRIBUTING.md)",
+      "Bash(cp:*)",
+      "Bash(where:*)",
+      "Bash(if not exist \"tests\\\\benchmarks\" mkdir testsbenchmarks)",
+      "Bash(cz changelog:*)",
+      "Bash(if not exist \".github\\\\workflows\" mkdir .githubworkflows)",
+      "Bash(del AUTOMATION_COMPLETE.md CHANGELOG_AUTOMATION_IMPLEMENTATION.md DEPENDENCY_AUTOMATION_IMPLEMENTATION.md DOCUMENTATION_IMPLEMENTATION.md IMPLEMENTATION_COMPLETE.md ISSUE_TEMPLATES_IMPLEMENTATION.md PERFORMANCE_BENCHMARKING_IMPLEMENTATION.md RELEASE_AUTOMATION_IMPLEMENTATION.md SECURITY_IMPLEMENTATION.md nul *.log)",
+      "Bash(if exist \"flac_detective-0.7.1\" rmdir /s /q flac_detective-0.7.1)",
+      "Bash(if exist \"flac_detective-0.8.0\" rmdir /s /q flac_detective-0.8.0)",
+      "Bash(if exist \"_templates\" rmdir /s /q _templates)",
+      "Bash(if exist \"api\" rmdir /s /q api)"
     ]
   }
 }
