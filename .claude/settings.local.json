@@ -54,7 +54,17 @@
       "Bash(pre-commit clean:*)",
       "Bash(if exist \"dist\" rmdir /s /q dist)",
       "Bash(if exist \"build\" rmdir /s /q build)",
-      "Bash(twine check:*)"
+      "Bash(twine check:*)",
+      "Bash(interrogate -vv:*)",
+      "Bash(mypy:*)",
+      "Bash(bandit:*)",
+      "Bash(wc:*)",
+      "Bash(if exist \"dist\\\\.tmp-*\" rmdir /s /q dist.tmp-*)",
+      "Bash(if exist \"flac_detective-0.9.1\" rmdir /s /q flac_detective-0.9.1)",
+      "Bash(if [ -f \"nul\" ])",
+      "Bash(then echo \"nul file exists\")",
+      "Bash(else echo \"nul file does not exist\")",
+      "Bash(fi)"
     ]
   }
 }
