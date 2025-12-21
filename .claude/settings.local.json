@@ -50,7 +50,11 @@
       "Bash(rm:*)",
       "Bash(mkdir:*)",
       "Bash(git mv:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(pre-commit clean:*)",
+      "Bash(if exist \"dist\" rmdir /s /q dist)",
+      "Bash(if exist \"build\" rmdir /s /q build)",
+      "Bash(twine check:*)"
     ]
   }
 }
