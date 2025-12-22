@@ -64,7 +64,12 @@
       "Bash(if [ -f \"nul\" ])",
       "Bash(then echo \"nul file exists\")",
       "Bash(else echo \"nul file does not exist\")",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(dist/flac_detective-0.9.1.tar.gz )",
+      "Bash(dist/flac_detective-0.9.1-py3-none-any.whl)",
+      "Bash(gh release view:*)",
+      "Bash(cloc:*)",
+      "Bash(grep:*)"
     ]
   }
 }
