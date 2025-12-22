@@ -73,7 +73,8 @@
       "Bash(if [ -d \"examples\" ])",
       "Bash([ -d \"tools\" ])",
       "Bash(then echo \"exists\")",
-      "Bash(else echo \"not found\")"
+      "Bash(else echo \"not found\")",
+      "Bash(twine upload:*)"
     ]
   }
 }
