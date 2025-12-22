@@ -69,7 +69,11 @@
       "Bash(dist/flac_detective-0.9.1-py3-none-any.whl)",
       "Bash(gh release view:*)",
       "Bash(cloc:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(if [ -d \"examples\" ])",
+      "Bash([ -d \"tools\" ])",
+      "Bash(then echo \"exists\")",
+      "Bash(else echo \"not found\")"
     ]
   }
 }
