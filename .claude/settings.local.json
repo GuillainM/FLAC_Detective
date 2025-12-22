@@ -75,7 +75,8 @@
       "Bash(then echo \"exists\")",
       "Bash(else echo \"not found\")",
       "Bash(twine upload:*)",
-      "Bash(pip wheel:*)"
+      "Bash(pip wheel:*)",
+      "Bash(if [ -d \"tools\" ])"
     ]
   }
 }
